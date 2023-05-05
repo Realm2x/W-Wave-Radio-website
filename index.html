@@ -67,21 +67,29 @@
               <div class="modal__wrapper">
                 <h2 class="modal__title title-reset">Вход</h2>
                 <p class="modal__text">Если у вас ещё нет аккаунта, <a class="modal__link" href="#">зарегистрируйтесь</a></p>
-                <form class="modal__form form" action="#" method="post">
-                  <div class="modal__form-group">
-                    <label>
-                      <span class="visually-hidden">Введите ваш логин</span>
-                      <input class="modal__input-login form-input form-control" placeholder="Логин" autocomplete="off" data-validate-field="name" name="name">
-                    </label>
+                <form class="modal__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+                  <div class="modal__form-row">
+                    <div class="modal__form-group">
+                      <label for="login">
+                        <span class="visually-hidden">Введите ваш логин</span>
+                        <div class="form-tooltip">
+                          <input class="modal__input-login form-input form-control" placeholder="Логин" autocomplete="off" data-validate-field="login" name="login" id="login">
+                        </div>
+                      </label>
+                    </div>
                   </div>
-                  <div class="modal__form-group">
-                    <label>
-                      <span class="visually-hidden">Введите ваш пароль</span>
-                      <input class="modal__input-pass form-input form-control" placeholder="Пароль" autocomplete="off" data-validate-field="password" name="password" id="password">
-                    </label>
+                  <div class="modal__form-row">
+                    <div class="modal__form-group">
+                      <label for="password">
+                        <span class="visually-hidden">Введите ваш пароль</span>
+                        <div class="form-tooltip">
+                          <input class="modal__input-pass form-input form-control" placeholder="Пароль" autocomplete="off" data-validate-field="password" name="password" id="password">
+                        </div>
+                      </label>
+                    </div>
                   </div>
+                  <button class="btn-reset modal__btn btn" aria-label="Войти">Войти</button>
                 </form>
-                <button class="btn-reset modal__btn btn" aria-label="Войти">Войти</button>
               </div>
               <div class="modal__other">
                 <p class="modal__text modal__text-other">Войти с помощью:</p>
@@ -116,83 +124,85 @@
         </div>
       </div>
     </div>
-    <div class="container header__bottom">
-      <nav class="submenu">
-        <ul class="submenu__list list-reset">
-          <li class="submenu__item">
-            <a class="submenu__link" href="#">Новости</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link" href="#">Блоги</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link" href="#">Топы</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link" href="#">Опросы</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link" href="#">Рейтинги</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link" href="#">Реклама</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="player">
-        <div class="player__block">
-          <button class="btn-reset player__btn-play play-animation" aria-label="Включить музыку">
-            <svg class="player__img-play img-play" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z"/>
-            </svg>    
-            <svg class="player__img-pause img-pause" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z"/>
-              <rect x="9" y="8" width="2" height="8" rx="1" fill="white"/>
-              <rect x="13" y="8" width="2" height="8" rx="1" fill="white"/>
-            </svg>            
-          </button>
-          <button class="player__open-btn btn-reset">
-            <svg class="player__open-img" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="7.5" cy="7.5" r="7.5"/>
-              <path d="M12 7.00014V8.00014H3V7.00014H12Z" fill="white"/>
-              <path d="M8 12.0001H7L7 3.00014L8 3.00014L8 12.0001Z" fill="white"/>
-            </svg>
-              Что в эфире?
-          </button>
+    <div class="header__bottom">
+      <div class="container header__bottom-block">
+        <nav class="submenu">
+          <ul class="submenu__list list-reset">
+            <li class="submenu__item">
+              <a class="submenu__link" href="#">Новости</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link" href="#">Блоги</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link" href="#">Топы</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link" href="#">Опросы</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link" href="#">Рейтинги</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link" href="#">Реклама</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="player">
+          <div class="player__block">
+            <button class="btn-reset player__btn-play play-animation" aria-label="Включить музыку">
+              <svg class="player__img-play img-play" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z"/>
+              </svg>    
+              <svg class="player__img-pause img-pause" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z"/>
+                <rect x="9" y="8" width="2" height="8" rx="1" fill="white"/>
+                <rect x="13" y="8" width="2" height="8" rx="1" fill="white"/>
+              </svg>            
+            </button>
+            <button class="player__open-btn btn-reset">
+              <svg class="player__open-img" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="7.5" cy="7.5" r="7.5"/>
+                <path d="M12 7.00014V8.00014H3V7.00014H12Z" fill="white"/>
+                <path d="M8 12.0001H7L7 3.00014L8 3.00014L8 12.0001Z" fill="white"/>
+              </svg>
+                Что в эфире?
+            </button>
+          </div>
+          <div class="player__wrapper">
+            <button class="player__btn player__btn--1 btn-reset play-animation" aria-label="Ранее в эфире">
+              <svg class="player__img img-play" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z"/>
+              </svg>
+              <svg class="player__img-pause img-pause" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z"/>
+                <rect x="9" y="8" width="2" height="8" rx="1" fill="white"/>
+                <rect x="13" y="8" width="2" height="8" rx="1" fill="white"/>
+              </svg>  
+              <span class="player__descr">
+                <span class="player__text">Ранее в эфире</span> 
+                <span class="player__text-name">«Музыка»</span>        
+              </span>          
+            </button>
+            <button class="player__btn player__btn--2 btn-reset play-animation" aria-label="Сейчас в эфире">
+              <svg class="player__img img-play" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z"/>
+              </svg>
+              <svg class="player__img-pause img-pause" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z"/>
+                <rect x="9" y="8" width="2" height="8" rx="1" fill="white"/>
+                <rect x="13" y="8" width="2" height="8" rx="1" fill="white"/>
+              </svg>   
+              <span class="player__descr">
+                <span class="player__text">Сейчас в эфире</span> 
+                <span class="player__text-name">«Как так?»</span>        
+              </span>
+            </button>
+          </div>
         </div>
-        <div class="player__wrapper">
-          <button class="player__btn player__btn--1 btn-reset play-animation" aria-label="Ранее в эфире">
-            <svg class="player__img img-play" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z"/>
-            </svg>
-            <svg class="player__img-pause img-pause" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z"/>
-              <rect x="9" y="8" width="2" height="8" rx="1" fill="white"/>
-              <rect x="13" y="8" width="2" height="8" rx="1" fill="white"/>
-            </svg>  
-            <span class="player__descr">
-              <span class="player__text">Ранее в эфире</span> 
-              <span class="player__text-name">«Музыка»</span>        
-            </span>          
-          </button>
-          <button class="player__btn player__btn--2 btn-reset play-animation" aria-label="Сейчас в эфире">
-            <svg class="player__img img-play" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z"/>
-            </svg>
-            <svg class="player__img-pause img-pause" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z"/>
-              <rect x="9" y="8" width="2" height="8" rx="1" fill="white"/>
-              <rect x="13" y="8" width="2" height="8" rx="1" fill="white"/>
-            </svg>   
-            <span class="player__descr">
-              <span class="player__text">Сейчас в эфире</span> 
-              <span class="player__text-name">«Как так?»</span>        
-            </span>
-          </button>
+        <div class="header__age">
+          <span class="header__age-text">12+</span>
         </div>
-      </div>
-      <div class="header__age">
-        <span class="header__age-text">12+</span>
       </div>
     </div>
   </header>
@@ -599,7 +609,7 @@
         </div>
         <ul class="transfers__list list-reset">
           <li class="transfers__item">
-            <article class="transfers__article">
+            <article class="transfers__article" tabindex="0">
               <picture>
                 <source srcset="img/transfers-1-320.jpg" media="(max-width: 500px)">
                 <img src="img/transfers-1.jpg" alt="cover art">
@@ -614,7 +624,7 @@
             </article>
           </li>
           <li class="transfers__item">
-            <article class="transfers__article">
+            <article class="transfers__article" tabindex="0">
               <picture>
                 <source srcset="img/transfers-2-320.jpg" media="(max-width: 500px)">
                 <img src="img/transfers-2.jpg" alt="cover art">
@@ -629,7 +639,7 @@
             </article>
           </li>
           <li class="transfers__item">
-            <article class="transfers__article">
+            <article class="transfers__article" tabindex="0">
               <picture>
                 <source srcset="img/transfers-3-320.jpg" media="(max-width: 500px)">
                 <img src="img/transfers-3.jpg" alt="cover art">
@@ -644,7 +654,7 @@
             </article>
           </li>
           <li class="transfers__item">
-            <article class="transfers__article">
+            <article class="transfers__article" tabindex="0">
               <picture>
                 <source srcset="img/transfers-4-320.jpg" media="(max-width: 500px)">
                 <img src="img/transfers-4.jpg" alt="cover art">
@@ -659,7 +669,7 @@
             </article>
           </li>
           <li class="transfers__item">
-            <article class="transfers__article">
+            <article class="transfers__article" tabindex="0">
               <picture>
                 <source srcset="img/transfers-5-320.jpg" media="(max-width: 500px)">
                 <img src="img/transfers-5.jpg" alt="cover art">
@@ -674,7 +684,7 @@
             </article>
           </li>
           <li class="transfers__item">
-            <article class="transfers__article">
+            <article class="transfers__article" tabindex="0">
               <picture>
                 <source srcset="img/transfers-6-320.jpg" media="(max-width: 500px)">
                 <img src="img/transfers-6.jpg" alt="cover art">
@@ -692,7 +702,7 @@
       </div>
     </section>
     <section class="guests" id="guests">
-      <div class="container guests__conteiner section-offset">
+      <div class="container guests__container section-offset">
         <h2 class="guests__title title-reset title">Гости</h2>
         <p class="guests__subtitle">У нас бывают:</p>
         <p class="guests__descr">Блогеры, арт-критики и деятели искусства, музыканты, молодые учёные и люди науки, историки, филологи и много других интересных гостей!</p>
@@ -710,49 +720,49 @@
               <div class="accordion__content ac-panel">
                 <ul class="list-reset accordion__list">
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn" data-button="sergey-denisov">Сергей Денисов</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Сергей Денисов</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn" data-button="evgeny-voynovsky">Евгений Войновский</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Евгений Войновский</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn" data-button="oleg-sviridovsky">Олег Свиридовский</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Олег Свиридовский</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn" data-button="denis-telman">Денис Тельман</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Денис Тельман</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn" data-button="matvey-mechnikov">Матвей Мечников</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Матвей Мечников</button>
                   </li>
                   <li class="accordion__item">
                     <button class="btn-reset accordion__btn" data-button="olga-martynova">Ольга Мартынова</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn" data-button="vladislav-cowpers">Владислав Кауперс</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Владислав Кауперс</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn" data-button="yuri-gorin">Юрий Горин</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Юрий Горин</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn" data-button="konstantin-prusino">Константин Прусино</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Константин Прусино</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn" data-button="dmitry-mikhalok">Дмитрий Михалок</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Дмитрий Михалок</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn" data-button="mikhail-pozhitnikov">Михаил Пожитников</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Михаил Пожитников</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn" data-button="maxim-sergeev">Максим Сергеев</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Максим Сергеев</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn" data-button="ivan-kalitnikov">Иван Калитников</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Иван Калитников</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn" data-button="peter-piotrovsky">Пётр Пиотровский</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Пётр Пиотровский</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn" data-button="georgy-poluyan">Георгий Полуян</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Георгий Полуян</button>
                   </li>
                 </ul>
               </div>
@@ -769,25 +779,25 @@
               <div class="accordion__content ac-panel">
                 <ul class="list-reset accordion__list">
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Сергей Денисов</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Сергей Денисов</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Евгений Войновский</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Евгений Войновский</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Олег Свиридовский</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Олег Свиридовский</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Денис Тельман</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Денис Тельман</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Матвей Мечников</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Матвей Мечников</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Ольга Мартынова</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Ольга Мартынова</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Владислав Кауперс</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Владислав Кауперс</button>
                   </li>
                 </ul>
               </div>
@@ -804,25 +814,25 @@
               <div class="accordion__content ac-panel">
                 <ul class="list-reset accordion__list">
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Сергей Денисов</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Сергей Денисов</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Евгений Войновский</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Евгений Войновский</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Олег Свиридовский</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Олег Свиридовский</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Денис Тельман</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Денис Тельман</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Матвей Мечников</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Матвей Мечников</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Ольга Мартынова</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Ольга Мартынова</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Георгий Полуян</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Георгий Полуян</button>
                   </li>
                 </ul>
               </div>
@@ -839,31 +849,31 @@
               <div class="accordion__content ac-panel">
                 <ul class="list-reset accordion__list">
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Владислав Кауперс</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Владислав Кауперс</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Юрий Горин</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Юрий Горин</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Константин Прусино</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Константин Прусино</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Дмитрий Михалок</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Дмитрий Михалок</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Михаил Пожитников</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Михаил Пожитников</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Максим Сергеев</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Максим Сергеев</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Иван Калитников</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Иван Калитников</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Пётр Пиотровский</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Пётр Пиотровский</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Георгий Полуян</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Георгий Полуян</button>
                   </li>
                 </ul>
               </div>
@@ -880,22 +890,22 @@
               <div class="accordion__content ac-panel">
                 <ul class="list-reset accordion__list">
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Дмитрий Михалок</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Дмитрий Михалок</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Михаил Пожитников</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Михаил Пожитников</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Максим Сергеев</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Максим Сергеев</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Иван Калитников</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Иван Калитников</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Пётр Пиотровский</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Пётр Пиотровский</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Георгий Полуян</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Георгий Полуян</button>
                   </li>
                 </ul>
               </div>
@@ -912,26 +922,26 @@
               <div class="accordion__content ac-panel">
                 <ul class="list-reset accordion__list">
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Сергей Денисов</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Сергей Денисов</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Матвей Мечников</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Матвей Мечников</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Ольга Мартынова</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Ольга Мартынова</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Владислав Кауперс</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Владислав Кауперс</button>
                   </li>
                   <li class="accordion__item">
-                    <button class="btn-reset accordion__btn">Михаил Пожитников</button>
+                    <button class="btn-reset accordion__btn" data-button="default">Михаил Пожитников</button>
                   </li>
                 </ul>
               </div>
             </li>
           </ul>
           <ul class="guests__card tabs list-reset">
-            <li class="tabs__item tabs__item--active">
+            <li class="tabs__item tabs__item--active" id="default">
               <picture>
                 <source srcset="img/guests-not-320.jpg" media="(max-width: 500px)">
                 <source srcset="img/guests-not-768.jpg" media="(max-width: 962px)">
@@ -1465,13 +1475,13 @@
           </div>
         </div>
         <div class="about__feedback">
-          <form class="about__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+          <form class="about__form form" action="https://jsonplaceholder.typicode.com/posts" method="post">
             <div class="about__form-row">
               <div class="about__form-group">
                 <label for="message">
                   <span class="visually-hidden">Введите ваше сообщение</span>
                 </label>
-                <div class="about__form-tooltip">
+                <div class="form-tooltip">
                   <textarea class="about__form-area" name="message" placeholder="Что скажете?" data-validate-field="text" id="message"></textarea>
                 </div>
               </div>
@@ -1481,7 +1491,7 @@
                 <label for="name">
                   <span class="visually-hidden">Введите ваше имя</span>
                 </label>
-                  <div class="about__form-tooltip">
+                  <div class="form-tooltip">
                     <input class="about__form-input form-input" type="text"  placeholder="Имя" data-validate-field="name" name="name" id="name">
                   </div>
               </div>
@@ -1489,18 +1499,22 @@
                 <label for="email">
                   <span class="visually-hidden">Введите вашу почту</span>
                 </label>
-                <div class="about__form-tooltip">
+                <div class="form-tooltip">
                   <input class="about__form-input form-input" type="email"  placeholder="Email" data-validate-field="email" name="email" id="email">
                 </div>
               </div>
             </div>
             <button class="btn-reset btn about__form-btn">Отправить</button>
             <div class="about__block-checkbox">
-              <input class="about__form-checkbox visually-hidden" type="checkbox" id="checkbox" data-validate-field="checkbox">
-              <span class="about__form-check"></span>
-              <label class="about__form-label" for="checkbox">
-                Согласен на обработку персональных данных
-              </label>
+              <div class="form-tooltip form-tooltip--checkbox">
+                <label for="checkbox">
+                  <span class="visually-hidden">Согласен на обработку персональных данных</span> 
+                  <input class="about__form-checkbox visually-hidden" type="checkbox" id="checkbox" data-validate-field="checkbox">
+                  <span class="about__form-check">
+                    Согласен на обработку персональных данных
+                  </span>
+                </label>
+              </div>
             </div>
           </form>
         </div>

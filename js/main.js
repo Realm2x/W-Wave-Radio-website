@@ -169,7 +169,35 @@ const swiper = new Swiper('.swiper', {
 
 
 
-new JustValidate('.about__form', {
+const validators = new JustValidate('.modal__form', {
+  rules: {
+    password: {
+      required: true,
+      minLenght: 2,
+      maxLenght: 15,
+    },
+    login: {
+      required: true
+    }
+  },
+  colorWrong: 'red',
+  tooltip: {
+    fadeOutTime: 4000,
+    selectorWrap: '.form-tooltip'
+  },
+  messages: {
+    login: {
+      required: 'Ошибка'
+    },
+    password: {
+      required: 'Ошибка'
+    }
+  }
+});
+
+
+
+const validator = new JustValidate('.about__form', {
   rules: {
     text: {
       required: true
@@ -185,12 +213,20 @@ new JustValidate('.about__form', {
     email: {
       required: true,
       email: true
+    },
+    password: {
+      required: true,
+      minLenght: 2,
+      maxLenght: 15,
+    },
+    login: {
+      required: true
     }
   },
   colorWrong: 'red',
   tooltip: {
     fadeOutTime: 4000,
-    selectorWrap: '.about__form-tooltip'
+    selectorWrap: '.form-tooltip'
   },
   messages: {
     text: {
@@ -206,5 +242,8 @@ new JustValidate('.about__form', {
       required: 'Ошибка',
       email: 'Введите корректный e-mail' 
     },
+    password: {
+      required: 'Ошибка'
+    }
   }
 });
