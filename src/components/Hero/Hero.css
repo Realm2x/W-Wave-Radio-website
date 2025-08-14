@@ -1,0 +1,111 @@
+.hero {
+  background-color: var(--white-color);
+}
+
+.hero__container {
+  background-image: url(../../assets/microphone.png);
+  background-repeat: no-repeat;
+  background-position: top 29px right 15px;
+}
+
+.hero__content {
+  max-width: 635px;
+}
+
+.hero__title {
+  margin-bottom: 14px;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+.hero__descr {
+  margin-bottom: 47px;
+  line-height: 24px;
+}
+
+.hero__descr-link {
+  position: relative;
+  color: var(--violet-color);
+  outline: none;
+}
+
+.hero__descr-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  display: block;
+  width: 0;
+  border-bottom: 1px solid var(--violet-color);
+  transition: color .3s ease-in-out, border .3s ease-in-out, background-color .3s ease-in-out, width .3s ease-in-out;
+}
+
+.hero__descr-link:focus {
+  color: var(--white-color);
+  background-color: var(--light_violet-color);
+}
+
+.hero__descr-link:active::after {
+  color: var(--dark_violet-color);
+  background-color: transparent;
+}
+
+.hero__descr-link:active {
+  border-bottom: var(--dark_violet-color);
+}
+
+.hero__btn {
+  color: var(--white-color);
+  background-color: var(--violet-color);
+  transition: background-color .3s ease-in-out, outline .3s ease-in-out;
+}
+
+.hero__btn:focus:not(:active) {
+  outline: 2px solid var(--dark_violet-color);
+  outline-offset: -1px;
+  background-color: var(--light_violet-color);
+}
+
+.hero__btn:active {
+  background-color: var(--dark_violet-color);
+}
+
+
+@media (max-width:1280px) {
+  .hero__content {
+    max-width: 539px;
+  }
+
+  .hero__container {
+    background-image: url(../../assets/microphone-1024.png);
+    background-position: top 83px right 99px;
+  }
+
+  .hero__descr {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width:962px) {
+  .hero__container {
+    background-image: none;
+  }
+}
+
+@media (max-width:700px) {
+  .hero__container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .hero__title {
+    margin-bottom: 8px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .hero__descr {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
