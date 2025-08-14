@@ -1,40 +1,52 @@
-# Getting Started with Create React App
+# W-Wave Radio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-19.1.0-blue) 
+![GitHub Pages](https://img.shields.io/badge/deployed-GitHub%20Pages-brightgreen)
 
-## Available Scripts
+Современный веб-сайт интернет-радиостанции с адаптивным дизайном и интерактивными элементами.
 
-In the project directory, you can run:
+## 🚀 Особенности
 
-### `npm start`
+- **Полностью адаптивный** - идеальное отображение на любых устройствах
+- **Кроссбраузерная поддержка** - работает во всех современных браузерах
+- **Плавные анимации** - реализованы через Framer Motion
+- **Интерактивные компоненты**:
+  - Стильные выпадающие меню (Choices.js)
+  - Отзывчивые слайдеры (Swiper)
+- **Оптимизированная сборка** - готовый к продакшену билд
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠 Технологии
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Технология | Описание |
+|------------|----------|
+| React 19   | Основной UI фреймворк |
+| Framer Motion | Анимации и переходы |
+| Swiper | Современный слайдер |
+| Choices.js | Кастомные селекты |
+| GitHub Pages | Хостинг проекта |
 
-### `npm test`
+## 📦 Установка
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Клонировать репозиторий:
+git clone https://github.com/realm2x/W-Wave-Radio-website.git
+2. Установить зависимости:
+npm install
+3. Запустить dev-сервер:
+npm start
+## 🔧 Скрипты проекта
 
-### `npm run build`
+Доступные npm-скрипты:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Скрипт       | Команда                 | Описание                              |
+|--------------|-------------------------|---------------------------------------|
+| `start`      | `react-scripts start`   | Запуск dev-сервера                    |
+| `build`      | `react-scripts build`   | Сборка production-версии              |
+| `predeploy`  | `npm run build`         | Автоматическая сборка перед деплоем   |
+| `deploy`     | `gh-pages -d build`     | Публикация на GitHub Pages            |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Пример использования:**
+npm run start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🌐 Демо
+Доступно по адресу:
+https://realm2x.github.io/W-Wave-Radio-website
